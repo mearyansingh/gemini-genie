@@ -38,7 +38,7 @@ function App() {
 				})
 			}
 
-			const response = await fetch('http://localhost:8000/gemini', options)
+			const response = await fetch('https://gemini-genie.vercel.app/gemini', options)
 			const result = await response.text()
 			setChatHistory(oldChatHistory => [
 				...oldChatHistory,
