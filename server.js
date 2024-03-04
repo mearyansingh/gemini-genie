@@ -1,4 +1,4 @@
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const express = require('express')
 const cors = require('cors')
@@ -7,7 +7,12 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const app = express()
 
-app.use(cors())
+const corsOptions = {
+   origin: 'https://gemini-genie.vercel.app',
+   methods: 'POST',
+};
+
+app.use(cors(corsOptions))
 
 app.use(express.json())
 
