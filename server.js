@@ -8,7 +8,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const app = express()
 
 const corsOptions = {
-   origin: 'https://gemini-genie.vercel.app',
+   origin: '*',
    methods: 'POST',
 };
 
